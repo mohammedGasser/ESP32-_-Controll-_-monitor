@@ -1,12 +1,19 @@
-function openDashboard(id){
+//this IP will be changed every place its local ip for your esp 
+// you must check every time //
+const ESP_IP=""
+var frequency = 0;
+var amplitude = 0;
+var status = "Waiting";
 
-    var xhttp = new XMLHttpRequest();
+// function openDashboard(id){
 
-    xhttp.open("GET","/dashboard?id="+id,true);
+//     var xhttp = new XMLHttpRequest();
 
-    xhttp.send();
+//     xhttp.open("GET","/dashboard?id="+id,true);
 
-}
+//     xhttp.send();
+
+// }
 
 function getSpectrum() {
 
@@ -17,12 +24,14 @@ function getSpectrum() {
         if (this.readyState == 4 && this.status == 200) {
 
             document.getElementById("value").innerHTML = this.responseText;
-
+            document.getElementById("frequency").innerHTML = frequency;
+            document.getElementById("amplitude").innerHTML = amplitude;
+            document.getElementById("status").innerHTML = status;
         }
 
     };
 
-    xhttp.open("GET", "/spectrum", true);
+    xhttp.open("GET",ESP_IP+ "/spectrum", true);
 
     xhttp.send();
 }
@@ -38,7 +47,7 @@ function sendName() {
 
     var xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", "/name?user=" + encodeURIComponent(name), true);
+    xhttp.open("GET", ESP_IP+"/name?user=" + encodeURIComponent(name), true);
 
     xhttp.send();
 
