@@ -1,3 +1,6 @@
+//this IP will be changed every place its local ip for your esp 
+// you must check every time //
+const ESP_IP=""
 function openDashboard(id){
 
     var xhttp = new XMLHttpRequest();
@@ -22,7 +25,7 @@ function getSpectrum() {
 
     };
 
-    xhttp.open("GET", "/spectrum", true);
+    xhttp.open("GET",ESP_IP+ "/spectrum", true);
 
     xhttp.send();
 }
@@ -38,7 +41,7 @@ function sendName() {
 
     var xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", "/name?user=" + encodeURIComponent(name), true);
+    xhttp.open("GET", ESP_IP+"/name?user=" + encodeURIComponent(name), true);
 
     xhttp.send();
 
