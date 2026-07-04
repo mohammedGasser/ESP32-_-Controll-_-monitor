@@ -6,12 +6,13 @@ var amplitude = 0;
 var status = "Waiting";
 
 function openDashboard(id){
+ 
+ 
+    window.location.href = "Dashboard" + id + ".html";
 
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.open("GET","/Dashboard?id="+id,true);
-
-    xhttp.send();
+    // var xhttp = new XMLHttpRequest();
+    // xhttp.open("GET","/Dashboard?id="+id,true);
+    // xhttp.send();
 
 }
 
