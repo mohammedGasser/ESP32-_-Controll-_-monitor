@@ -5,15 +5,15 @@ var frequency = 0;
 var amplitude = 0;
 var status = "Waiting";
 
-// function openDashboard(id){
+function openDashboard(id){
 
-//     var xhttp = new XMLHttpRequest();
+    var xhttp = new XMLHttpRequest();
 
-//     xhttp.open("GET","/dashboard?id="+id,true);
+    xhttp.open("GET","/Dashboard?id="+id,true);
 
-//     xhttp.send();
+    xhttp.send();
 
-// }
+}
 
 function getSpectrum() {
 
