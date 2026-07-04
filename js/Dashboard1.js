@@ -1,15 +1,19 @@
 //this IP will be changed every place its local ip for your esp 
 // you must check every time //
 const ESP_IP=""
-function openDashboard(id){
+var frequency = 0;
+var amplitude = 0;
+var status = "Waiting";
 
-    var xhttp = new XMLHttpRequest();
+// function openDashboard(id){
 
-    xhttp.open("GET","/dashboard?id="+id,true);
+//     var xhttp = new XMLHttpRequest();
 
-    xhttp.send();
+//     xhttp.open("GET","/dashboard?id="+id,true);
 
-}
+//     xhttp.send();
+
+// }
 
 function getSpectrum() {
 
