@@ -55,13 +55,13 @@ function getSpectrum() {
 
     xhttp.onreadystatechange = function () {
      // Check that the request is complete and the server responded successfully
-
+    
         if (this.readyState == 4 && this.status == 200) {
-
-            document.getElementById("value").innerHTML = this.responseText;
-            document.getElementById("frequency").innerHTML = frequency;
-            document.getElementById("amplitude").innerHTML = amplitude;
-            document.getElementById("status").innerHTML = status;
+            const data = JSON.parse(this.responseText)
+            document.getElementById("value").innerHTML = data.value;
+            document.getElementById("frequency").innerHTML = data.frequency;
+            document.getElementById("amplitude").innerHTML = data.amplitude;
+            document.getElementById("status").innerHTML = data.status;
         }
 
     };
