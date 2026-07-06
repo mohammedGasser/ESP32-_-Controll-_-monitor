@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sensor3 Dashboard</title>
+<title>Sensor1 Dashboard</title>
 <span id="value">0</span>
-<script src="js/Dashboard3.js"></script>
+ 
 <style>
 *{
     margin:0;
@@ -99,21 +99,19 @@ canvas{
 
 <div class="container">
 
-<div class="cards">
-
 <div class="card">
-<h3>Frequency</h3>
-<div class="value">1.2 kHz</div>
+    <h3>Frequency</h3>
+    <div class="value" id="frequency">0</div>
 </div>
 
 <div class="card">
-<h3>Amplitude</h3>
-<div class="value">78%</div>
+    <h3>Amplitude</h3>
+    <div class="value" id="amplitude">0</div>
 </div>
 
 <div class="card">
-<h3>Status</h3>
-<div class="value">Running</div>
+    <h3>Status</h3>
+    <div class="value" id="status">Waiting</div>
 </div>
 
 </div>
@@ -124,24 +122,18 @@ canvas{
 
 <h3 style="margin-bottom:20px;color:#00e5ff;">
 Spectrum Analyzer
+ 
 </h3>
-
 <canvas id="canvas" width="1000" height="250"></canvas>
 
-</div> 
-</h3>
- 
 
-<script src="js/Dashboard2.js"></script>
- 
 </div>
 
 </div>
 
 </div>
 
-
- 
+<script src="js/Dashboard3.js"></script>
 
 </body>
 </html>
