@@ -52,11 +52,12 @@ function openDashboard(id){
 function getSpectrum() {
 
     var xhttp = new XMLHttpRequest();
-
+   
     xhttp.onreadystatechange = function () {
      // Check that the request is complete and the server responded successfully
     
         if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
             const data = JSON.parse(this.responseText)
             document.getElementById("value").innerHTML = data.value;
             document.getElementById("frequency").innerHTML = data.frequency;
