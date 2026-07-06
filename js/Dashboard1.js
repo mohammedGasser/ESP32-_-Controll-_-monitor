@@ -1,5 +1,38 @@
 //this IP will be changed every place its local ip for your esp 
 // you must check every time //
+ 
+const canvas=document.getElementById("canvas");
+const ctx=canvas.getContext("2d");
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+let bars=50;
+
+for(let i=0;i<bars;i++){
+
+let h=Math.random()*180;
+
+ctx.fillStyle=`rgb(${50+i*4},255,255)`;
+
+ctx.fillRect(
+i*20+8,
+220-h,
+14,
+h
+);
+
+}
+
+requestAnimationFrame(draw);
+
+}
+
+draw();
+
+ 
+
 const ESP_IP=""
 var frequency = 0;
 var amplitude = 0;
