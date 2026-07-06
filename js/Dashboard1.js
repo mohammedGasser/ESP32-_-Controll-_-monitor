@@ -31,7 +31,7 @@ requestAnimationFrame(draw);
 
 draw();
 
-setInterval(draw, 100); 
+// setInterval(draw, 100); 
 
 const ESP_IP=""
 var frequency = 0;
