@@ -33,10 +33,10 @@ draw();
 
 // setInterval(draw, 100); 
 
-const ESP_IP="192.168.1.3"
-var frequency = 0;
-var amplitude = 0;
-var status = "Waiting";
+// const ESP_IP="192.168.1.3"
+// var frequency = 0;
+// var amplitude = 0;
+// var status = "Waiting";
 
 function openDashboard(id){
  
