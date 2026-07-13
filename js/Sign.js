@@ -1,5 +1,4 @@
 function signIn() {
-
     const name = document.getElementById("username").value.trim();
 
     if (name === "") {
@@ -8,16 +7,14 @@ function signIn() {
     }
 
     localStorage.setItem("username", name);
-
     document.getElementById("welcome").innerHTML = "Hi, " + name + " 👋";
 }
 
-window.onload = function () {
+function sendName() {
+    const text = document.getElementById("txt").value;
 
-    const name = localStorage.getItem("username");
+    console.log(text);
 
-    if (name) {
-        document.getElementById("welcome").innerHTML = "Hi, " + name + " 👋";
-    }
-
+    // هنا هتبعت القيمة للـ ESP32
+    // fetch("/send?msg=" + text);
 }
