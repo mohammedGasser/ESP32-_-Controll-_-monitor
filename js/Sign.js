@@ -2,21 +2,21 @@ function signIn() {
 
     const name = document.getElementById("username").value.trim();
 
-    if(name === "")
-    {
+    if (name === "") {
         alert("Please enter your name");
         return;
     }
 
-    document.getElementById("welcome").innerHTML = "Hi, " + name + " 👋";
+    localStorage.setItem("username", name);
 
+    document.getElementById("welcome").innerHTML = "Hi, " + name + " 👋";
 }
-window.onload = function(){
+
+window.onload = function () {
 
     const name = localStorage.getItem("username");
 
-    if(name)
-    {
+    if (name) {
         document.getElementById("welcome").innerHTML = "Hi, " + name + " 👋";
     }
 
