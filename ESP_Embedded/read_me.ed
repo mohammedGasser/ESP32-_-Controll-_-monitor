@@ -1,0 +1,11 @@
+THE main Component files in ESP 
+1_Main.ino for run  esp32 code 
+2_Sensors file 
+3_Connect with wifi and get local IP 
+4_database_files
+5_back_plan_file
+6_sign_in and encryption_file (Hash passwords)
+7_multi_core_file esp32 has 2 cpu cores 
+8_FreeRTOS_file make all functions as task in RTOS 
+
+
