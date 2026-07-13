@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +13,10 @@
     <title>ESP32</title>
   </head>
   <script src="js/Dashboard1.js"></script>
+   <script src="js/Dashboard2.js"></script>
+    <script src="js/Dashboard3.js"></script>
+   <script src="js/Sign.js"></script>
+ 
   <body>
     <!-- HEADER -->
     <div class="headerContainer">
@@ -22,11 +26,11 @@
         </a>
         <div class="headerLinks">
           <a href="index.html">Home</a>
-          <a href="Dashboard1.html" onclick="openDashboard(1)">Spectrum Dashboard</a>
-          <a href="dashboard2.html" onclick="openDashboard(2)">Ultrasonic Dashboard</a>
-          <a href="dashboard3.html" onclick="openDashboard(3)">Potentiometer Dashboard</a>
+          <a href="Dashboard1.html" onclick="openDashboard(1)">Dashboard1</a>
+          <a href="Dashboard2.html" onclick="openDashboard(2)">Dashboard2</a>
+          <a href="Dashboard3.html "onclick="openDashboard(3)">Dashboard3</a>
           <a href="#">Product Details</a>
-         <button class="btn">sign in</button>
+         <!-- <button class="btn">sign in</button> -->
         </div>
       </div>
     </div>
@@ -37,17 +41,19 @@
         <!-- LEFT SIDE -->
         <div class="leftSide">
           <p class="welcome">Welcome to ESP32</p>
-          <h1 class="slogan">best IOT site For Kids Ever!</h1>
+          <h1 class="slogan">Build Smart Projects with ESP32</h1>
           <p class="description">
             ESP32 Controller web is free Monitor for your
             Embedded or AI or STEAM Projects .check Your Projects /Controllers or Sensors    
             on Dashboards.
           </p>
           <div class="searchBar">
-            <input type="text" placeholder="Type Something" />
-            <button class="btn searchBtn">Sign in</button>
-            <input id="txt" type="text">
-            <button class="btn" onclick="sendName()">Send</button>
+          <input id="username" type="text" placeholder="Enter your name">
+          <button class="btn searchBtn" onclick="signIn()">Sign In</button>
+          <h2 id="welcome"></h2>
+          <hr>
+          <input id="txt" type="text">
+          <button class="btn" onclick="sendName()">Send</button>
           </div>
         </div>
 
@@ -82,8 +88,7 @@
     <!-- FOOTER  -->
     <div class="footerContainer">
       <div class="footer">
-        copyright &copy; 2048 LUGX Gaming Company. All rights reserved. Design:
-        TemplateMo
+        Build and Learn with ESP32 
       </div>
     </div>
   </body>

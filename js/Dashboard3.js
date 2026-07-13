@@ -67,7 +67,7 @@ function getSpectrum() {
 
     };
 
-    xhttp.open("GET",ESP_IP+ "/Dashboard1", true);
+    xhttp.open("GET",ESP_IP+ "/Dashboard3", true);
 
     xhttp.send();
 }
